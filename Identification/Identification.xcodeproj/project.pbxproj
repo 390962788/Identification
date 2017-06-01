@@ -15,6 +15,7 @@
 		6D0030781EE007DE0087C382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0030761EE007DE0087C382 /* LaunchScreen.storyboard */; };
 		6D0030831EE007DE0087C382 /* IdentificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0030821EE007DE0087C382 /* IdentificationTests.m */; };
 		6D00308E1EE007DE0087C382 /* IdentificationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D00308D1EE007DE0087C382 /* IdentificationUITests.m */; };
+		6D00309E1EE0085E0087C382 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D00309D1EE0085E0087C382 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		6D0030891EE007DE0087C382 /* IdentificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdentificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D00308D1EE007DE0087C382 /* IdentificationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdentificationUITests.m; sourceTree = "<group>"; };
 		6D00308F1EE007DE0087C382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D00309C1EE0085E0087C382 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		6D00309D1EE0085E0087C382 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		6D0030671EE007DE0087C382 /* Identification */ = {
 			isa = PBXGroup;
 			children = (
+				6D00309B1EE008480087C382 /* Model */,
 				6D00306B1EE007DE0087C382 /* AppDelegate.h */,
 				6D00306C1EE007DE0087C382 /* AppDelegate.m */,
 				6D00306E1EE007DE0087C382 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				6D00308F1EE007DE0087C382 /* Info.plist */,
 			);
 			path = IdentificationUITests;
+			sourceTree = "<group>";
+		};
+		6D00309B1EE008480087C382 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D00309C1EE0085E0087C382 /* User.h */,
+				6D00309D1EE0085E0087C382 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D00309E1EE0085E0087C382 /* User.m in Sources */,
 				6D0030701EE007DE0087C382 /* ViewController.m in Sources */,
 				6D00306D1EE007DE0087C382 /* AppDelegate.m in Sources */,
 				6D00306A1EE007DE0087C382 /* main.m in Sources */,
