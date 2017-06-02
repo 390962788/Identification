@@ -16,7 +16,9 @@
 		6D0030A71EE00B500087C382 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0030A61EE00B500087C382 /* User.m */; };
 		6D0030AC1EE00B5C0087C382 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0030AA1EE00B5C0087C382 /* AppDelegate.m */; };
 		6D0030AD1EE00B5C0087C382 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0030AB1EE00B5C0087C382 /* main.m */; };
-		6D0030B11EE00B680087C382 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D0030B01EE00B680087C382 /* Info.plist */; };
+		6D0030B71EE00E9B0087C382 /* DataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0030B61EE00E9B0087C382 /* DataBaseHelper.m */; };
+		6D552FDA1EE104F70014B58F /* DataBase in Resources */ = {isa = PBXBuildFile; fileRef = 6D552FD91EE104F70014B58F /* DataBase */; };
+		6D552FDD1EE107F80014B58F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D552FDC1EE107F80014B58F /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		6D0030AA1EE00B5C0087C382 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6D0030AB1EE00B5C0087C382 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D0030B01EE00B680087C382 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D0030B51EE00E9B0087C382 /* DataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseHelper.h; sourceTree = "<group>"; };
+		6D0030B61EE00E9B0087C382 /* DataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseHelper.m; sourceTree = "<group>"; };
+		6D552FD91EE104F70014B58F /* DataBase */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataBase; sourceTree = "<group>"; };
+		6D552FDC1EE107F80014B58F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D552FDD1EE107F80014B58F /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +96,7 @@
 				6D0030811EE007DE0087C382 /* IdentificationTests */,
 				6D00308C1EE007DE0087C382 /* IdentificationUITests */,
 				6D0030661EE007DE0087C382 /* Products */,
+				6D552FDB1EE107F80014B58F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +113,8 @@
 		6D0030671EE007DE0087C382 /* Identification */ = {
 			isa = PBXGroup;
 			children = (
+				6D552FD91EE104F70014B58F /* DataBase */,
+				6D0030B21EE00C600087C382 /* Util */,
 				6D0030AE1EE00B680087C382 /* Resource */,
 				6D0030A81EE00B5C0087C382 /* Other */,
 				6D0030A41EE00B500087C382 /* Model */,
@@ -184,6 +194,23 @@
 				6D0030B01EE00B680087C382 /* Info.plist */,
 			);
 			path = Plist;
+			sourceTree = "<group>";
+		};
+		6D0030B21EE00C600087C382 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6D0030B51EE00E9B0087C382 /* DataBaseHelper.h */,
+				6D0030B61EE00E9B0087C382 /* DataBaseHelper.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		6D552FDB1EE107F80014B58F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D552FDC1EE107F80014B58F /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,9 +319,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0030B11EE00B680087C382 /* Info.plist in Resources */,
 				6D0030781EE007DE0087C382 /* LaunchScreen.storyboard in Resources */,
 				6D0030751EE007DE0087C382 /* Assets.xcassets in Resources */,
+				6D552FDA1EE104F70014B58F /* DataBase in Resources */,
 				6D0030731EE007DE0087C382 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +349,7 @@
 			files = (
 				6D0030A71EE00B500087C382 /* User.m in Sources */,
 				6D0030AC1EE00B5C0087C382 /* AppDelegate.m in Sources */,
+				6D0030B71EE00E9B0087C382 /* DataBaseHelper.m in Sources */,
 				6D0030A31EE00A610087C382 /* ViewController.m in Sources */,
 				6D0030AD1EE00B5C0087C382 /* main.m in Sources */,
 			);
@@ -472,7 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Identification/Info.plist;
+				INFOPLIST_FILE = Identification/Resource/Plist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gyz.Identification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,7 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Identification/Info.plist;
+				INFOPLIST_FILE = Identification/Resource/Plist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gyz.Identification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
