@@ -10,10 +10,10 @@
 #import "sqlite3.h"
 //数据库帮助类
 @implementation DataBaseHelper
-sqlite3 *database;;
 
 //打开数据库
-+(void)openDataBase{
++(sqlite3 *)openDataBase{
+    sqlite3 *database = nil;
     NSString *dbDir = @"DataBase";
     NSString *dbName = @"shenfenzheng.db";
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -60,11 +60,12 @@ sqlite3 *database;;
         }
 
     }
+    return database;
     
 }
 
 //关闭数据库
-+(void)closeDataBase{
++(void)closeDataBase:(sqlite3 *) database{
     if (database != nil) {
         //关闭数据库
         int databaseResult = sqlite3_close(database);
@@ -73,6 +74,7 @@ sqlite3 *database;;
         } else{
             NSLog(@"关闭数据库失败");
         }
+        database = nil;
     }
 }
 @end

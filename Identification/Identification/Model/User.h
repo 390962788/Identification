@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
-
+@property(nonatomic,strong) NSString *bill_id;
+@property(nonatomic,strong) NSString *card_code;
 @end

@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *tfPhoneNum;
+@property (weak, nonatomic) IBOutlet UILabel *lbIDNum;
+@property (weak, nonatomic) IBOutlet UIButton *btQuery;
+- (IBAction)getIDNumByPhoneNum:(id)sender;
 
 @end
 

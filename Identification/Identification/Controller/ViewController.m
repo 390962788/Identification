@@ -8,16 +8,22 @@
 
 #import "ViewController.h"
 #import "DataBaseHelper.h"
+#import "sqlite3.h"
+#import "UserService.h"
+#import "User.h"
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
+sqlite3 *database;
+UserService *userService;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [DataBaseHelper openDataBase];
+    database = [DataBaseHelper openDataBase];
+    userService = [[UserService alloc] init];
 }
 
 
@@ -27,4 +33,18 @@
 }
 
 
+- (IBAction)getIDNumByPhoneNum:(id)sender {
+    NSString *phoneNum = _tfPhoneNum.text;
+    if (phoneNum == nil) {
+        
+        return;
+    }
+    
+    User *user = [userService getIDNumByPhoneNum:phoneNum andDataBase:database];
+    _lbIDNum.text = user.card_code;
+}
+
+-(void)viewDidUnload{
+    [DataBaseHelper closeDataBase:database];
+}
 @end

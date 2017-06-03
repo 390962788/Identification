@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "sqlite3.h"
 @interface DataBaseHelper : NSObject
-+(void)openDataBase;
-+(void)closeDataBase;
+
++(sqlite3 *)openDataBase;
++(void)closeDataBase:(sqlite3 *)database;
 @end
